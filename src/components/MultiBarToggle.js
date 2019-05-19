@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Animated, TouchableOpacity, TouchableWithoutFeedback, Vibration, View} from 'react-native';
+import Toast, {DURATION} from 'react-native-easy-toast'
 
 import {Colors} from '../utils';
 
@@ -69,6 +70,8 @@ class MultiBarToggle extends Component {
                     duration: actionAnimationDuration
                 })))
             ]).start();
+               this.refs.toast.show('hello world!');
+
         }
 
         toggleVibration && Vibration.vibrate();
@@ -198,6 +201,7 @@ class MultiBarToggle extends Component {
                         {icon}
                     </Animated.View>
                 </AnimatedTouchable>
+                <Toast ref="toast"/>
             </View>
         );
     }
