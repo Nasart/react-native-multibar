@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {SafeAreaView, TouchableOpacity, View} from 'react-native';
+import {SafeAreaView, TouchableOpacity, View,Dimensions} from 'react-native';
+const { width : WIDTH  } = Dimensions.get('window');
 
 import {Colors} from '../utils';
 
@@ -132,7 +133,7 @@ const Styles = {
     },
     tabStyle: {
         height: 50,
-        width: 50,
+        width: WIDTH/3,
         alignItems: 'center',
         justifyContent: 'center'
     }
